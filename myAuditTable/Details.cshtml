@@ -1,0 +1,55 @@
+﻿@page
+@model Navi2.Pages.myAuditTable.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AuditTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.UserID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.UserID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.SequenceNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.SequenceNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.Period)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.Period)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.ActionTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.ActionTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.DateStamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.DateStamp)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.AuditTable.AuditID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

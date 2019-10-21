@@ -1,0 +1,59 @@
+﻿@page
+@model Navi2.Pages.myAuditTable.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AuditTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AuditTable.UserID" class="control-label"></label>
+                <input asp-for="AuditTable.UserID" class="form-control" />
+                <span asp-validation-for="AuditTable.UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTable.SequenceNumber" class="control-label"></label>
+                <input asp-for="AuditTable.SequenceNumber" class="form-control" />
+                <span asp-validation-for="AuditTable.SequenceNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTable.Period" class="control-label"></label>
+                <input asp-for="AuditTable.Period" class="form-control" />
+                <span asp-validation-for="AuditTable.Period" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTable.Role" class="control-label"></label>
+                <input asp-for="AuditTable.Role" class="form-control" />
+                <span asp-validation-for="AuditTable.Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTable.ActionTaken" class="control-label"></label>
+                <input asp-for="AuditTable.ActionTaken" class="form-control" />
+                <span asp-validation-for="AuditTable.ActionTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditTable.DateStamp" class="control-label"></label>
+                <input asp-for="AuditTable.DateStamp" class="form-control" />
+                <span asp-validation-for="AuditTable.DateStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

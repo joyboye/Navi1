@@ -1,0 +1,58 @@
+﻿@page
+@model Navi2.Pages.myAuditTable.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AuditTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.UserID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.UserID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.SequenceNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.SequenceNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.Period)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.Period)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.ActionTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.ActionTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuditTable.DateStamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuditTable.DateStamp)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="AuditTable.AuditID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
